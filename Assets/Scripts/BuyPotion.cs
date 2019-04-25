@@ -28,3 +28,5 @@ public class BuyPotion : MonoBehaviour {
     	}
     }
 }
+
+// test
