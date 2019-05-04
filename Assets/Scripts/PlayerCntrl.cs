@@ -23,15 +23,21 @@ public class PlayerCntrl : MonoBehaviour {
 	public Text potionsCountText;
 
 	private Rigidbody2D rb;
+	private Slider healthbar;
 
     void Start() {
         rb = GetComponent <Rigidbody2D>();
         potionsCountText.text = potions.ToString();
+
+        healthbar = GameObject.Find("Healthbar").GetComponent<Slider>();
     }
 
     void Update() {
     	if(health > 0){
+    		healthbar.value = health;
     		hpText.text = "HP: "+health.ToString();
+    	}else{
+    		healthbar.value = 0;
     	}
     	if(!stop){
         	rb.MovePosition(rb.position + Vector2.right * speed * Time.deltaTime);
