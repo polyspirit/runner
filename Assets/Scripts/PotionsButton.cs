@@ -16,11 +16,13 @@ public class PotionsButton : MonoBehaviour {
     }
 
     public void DoHeal() {
+        Debug.Log("Try heal");
     	if(pers.potions > 0){
     		pers.potions -= 1;
     		pers.health += heal;
     		pers.hpText.text = "HP: "+pers.health.ToString();
     		buttonText.text = pers.potions.ToString();
+            Debug.Log("Heal: "+heal);
     	}
     }
 }

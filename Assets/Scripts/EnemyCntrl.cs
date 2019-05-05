@@ -54,7 +54,7 @@ public class EnemyCntrl : MonoBehaviour
 			Destroy(gameObject);
 			player.stop = false;
 		}
-		Debug.Log("Выпало: "+random + ", игрок нанес " + cur_damage + " урона");
+		// Debug.Log("Выпало: "+random + ", игрок нанес " + cur_damage + " урона");
  	}
 
 	void EnemyTurn() {
@@ -73,6 +73,6 @@ public class EnemyCntrl : MonoBehaviour
 			player.stop = true;
 			player.hpText.text = "Game Over";
 		}
-		Debug.Log("Выпало: "+random + ", враг нанес " + cur_damage + " урона");
+		// Debug.Log("Выпало: "+random + ", враг нанес " + cur_damage + " урона");
  	}
 }

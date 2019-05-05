@@ -19,6 +19,7 @@ public class DamageButton : MonoBehaviour {
     private float buttonWidthCurrent = 160f;
 
     void Start() {
+        Debug.Log("DamageButton ready");
     	button = GetComponent<Button>();
         effectImage = GameObject.Find("Effect").GetComponent<Image>();
         effectRect = effectImage.transform as RectTransform;
@@ -32,6 +33,7 @@ public class DamageButton : MonoBehaviour {
     }
 
     public void DoubleDamage() {
+        Debug.Log("DamageButton pressed");
     	button.interactable = false;
         pers.damage = pers.damage*2;
         effectWorks = true;
